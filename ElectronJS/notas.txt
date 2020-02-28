@@ -1,0 +1,4 @@
+instalamos el paquete:
+npm install electron-reload 
+para que no tengamos que reiniciar cada rato nuestra aplicacion a la hora de realizar cambios,
+sino que esta automaticamente verifique y haga los cambios
