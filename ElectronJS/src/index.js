@@ -14,7 +14,6 @@ if(process.env.NODE_ENV !== 'production') {
 }
 
 let mainWindow;
-let ventana2, modalWindow;
 app.on("ready", ()=> {
     //Una vez  que carga creamos una nueva ventana
     mainWindow =  new BrowserWindow({});
@@ -56,31 +55,6 @@ function crearVentana2() {
 }
 
 
-function modal() {
-    modalWindow = new BrowserWindow({
-        width:200,
-        height: 130,
-        title: 'Modal',
-        backgroundColor: '#023s',
-        parent: mainWindow,
-        modal: true,
-        show: false
-    });
-
-    modalWindow.once('ready-to-show', ()=> {
-        modalWindow.show()
-    });
-
-    modalWindow.loadURL(url.format({
-        pathname: path.join(__dirname, 'views/modal.html'),
-        protocol: 'file',
-        slashes: true
-    }));
-
-    modalWindow.on('closed', ()=> {
-        modalWindow = null;
-    });
-}
 
 
 
@@ -110,22 +84,6 @@ const templateMenu = [
         click() {
             crearVentana2();
         }
-    },
-
-    {
-        label: 'Ventana 2'
-    },
-
-    {
-        label: 'Ventana 3'
-    },
-
-    {
-        label: 'Ventana 4'
-    }, 
-
-    {
-        label: 'Ventana 5'
     }
 ];
 
