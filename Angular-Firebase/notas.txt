@@ -1,0 +1,15 @@
+Instalamos angular con:
+npm install -g @angular/cli
+Luego creamos un nuevo proyecto con:
+ng new angular5-firebase-app
+Luego instalamos firebase y el modulo angularfire2 que es la integracion de firebase con angular:
+npm install firebase angularfire2
+Configuramos angular para realizar la conexion con firebase dentro src/environments/environment.ts
+
+Para crear un componente de forma abreviada escribimos el sigte comando:
+(g=generate, c=component)
+ng g c nombre-componente
+
+Para crear un componente de servicio de forma abreviada escribimos el sigte comando:
+(g=generate, s=servicio)
+ng g s nombre-componente
